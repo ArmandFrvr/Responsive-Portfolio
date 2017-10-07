@@ -1,0 +1,364 @@
+
+/* Import reset CSS */
+@import url("reset.css");
+
+
+
+/* -------- General styles -------- */
+body {
+  color: #727272; /* #777777 doesn't meet WCAG 2.0 contrast requirements */
+  font-family: 'Karla', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  background-image: url("../images/cork-wallet.png");
+  background-repeat: repeat;
+}
+
+h1 {
+  color: #367C79; /* #4aaaa5 doesn't meet WCAG 2.0 contrast requirements */
+  font-family: 'Raleway', 'Georgia', Times, Times New Roman, serif;
+
+  font-size: 1.5em;
+}
+
+h2 {
+  color: #367C79; /* #4aaaa5 doesn't meet WCAG 2.0 contrast requirements */
+  font-family: 'Raleway', 'Georgia', Times, Times New Roman, serif;
+
+  font-size: 1.3em;
+}
+
+hr {
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+.sub-text {
+  font-size: .8em;
+}
+
+a {
+  color: #0000b3;
+}
+
+a:visited {
+
+}
+/* -------------------------------- */
+
+
+
+/* ------------ Header ------------ */
+header {
+  background-color: #FFFFFF !important;
+  border-bottom: 2px solid #cccccc;
+  margin-bottom: 30px;
+}
+
+nav {
+  font-family: 'Karla', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+  padding:20px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+nav a:hover, nav a:focus {
+  /* color: #367C79; */
+  /*font-weight: bold;*/
+  background-color: #367C79;
+  color: white;
+}
+
+nav a {
+  display: inline-block;
+}
+
+nav a::first-letter {
+  border-bottom: 1px solid #0000b3;
+  padding-bottom: .01em;
+}
+
+#logo {
+  background-color: #367C79;
+  color: white;
+  font-size: 1.3em;
+  font-family: 'Raleway', 'Georgia', Times, Times New Roman, serif;
+  padding:20px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+@media (min-width: 525px) {
+  #headerwrapper {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 524px) {
+  #headerwrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* -------------------------------- */
+
+
+
+/* ------- Social media box ------- */
+#social-media {
+  background-color: #FFFFFF;
+  border: 1px solid #dddddd;
+  flex: 1 1 20%;
+  width: 20%;
+  min-width: 180px;
+  text-align: center;
+  align-self: flex-start;
+  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+h2.social-media {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr.social-media {
+  max-width: 94%;
+}
+
+.sm-icon {
+  padding: 0px;
+  margin: 0px;
+  width: 31%;
+  height: auto;
+}
+
+.sm-icon:hover {
+  width: 35%;
+  margin: -2%;
+}
+/* -------------------------------- */
+
+
+
+/* ---- Main area and flexbox ----- */
+#main-content {
+  background-color: #FFFFFF;
+  border: 1px solid #dddddd;
+  flex: 1 1 70%;
+  padding: 20px;
+  padding-top: 0;
+  margin-bottom: 50px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+#wrapper, #headerwrapper { /* Use the same margins for the header and body content so they align */
+  margin: 0 auto;
+  display: flex;
+}
+
+#wrapper {
+    justify-content: space-between;
+}
+
+@media (min-width: 600px) {
+  #wrapper, #headerwrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 599px) {
+  #wrapper, #headerwrapper {
+    width: 96%;
+  }
+}
+
+@media (min-width: 800px) {
+  #wrapper {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 799px) {
+  #wrapper {
+    flex-wrap: wrap;
+  }
+}
+/* -------------------------------- */
+
+
+
+/* ----------- Biography ---------- */
+@media (max-width: 799px) {
+  .bio-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: .6em;
+  }
+}
+
+@media (min-width: 800px) {
+  .bio-img {
+    float:left;
+    max-width: 50%;
+    height: auto;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .bio-img {
+
+    max-width: 300px;
+
+  }
+}
+/* -------------------------------- */
+
+
+
+/* --------- Form styles ---------- */
+form {
+  width: 100%;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .4em;
+  margin-bottom: 1em;
+  margin-top: .3em;
+  font-family: 'Karla', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+button[type=submit] {
+  margin-bottom: 1em;
+}
+
+button[type=submit]:hover, button[type=submit]:focus {
+  color: white;
+  background-color: #367C79;
+}
+
+.required:before {
+  position: absolute;
+  margin-left: -10px;
+  content: "* ";
+  color: #C00000;
+}
+
+/* Placeholder text styling snipped from https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research */
+-webkit-input-placeholder {
+  color: #767676;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #767676;
+  opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19 */
+  color: #767676;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #767676;
+  opacity: 1;
+}
+/* -------------------------------- */
+
+
+
+/* Portfolio styles */
+
+#portfolio-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: -15px;
+}
+
+.portfolio-item {
+  flex-grow: 1;
+  flex-basis: 200px;
+  width: 200px;
+  min-width: 200px;
+  max-width: 300px;
+  margin: 15px;
+  position: relative;
+}
+
+@media (max-width: 599px) {
+  .portfolio-item {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.portfolio-filler { /* 0-height boxes for last row spacing */
+  flex-grow: 1;
+  flex-basis: 200px;
+  width: 200px;
+  height: 0px;
+  min-width: 200px;
+  max-width: 300px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.portfolio-item-img {
+  width: 100%;
+}
+
+.portfolio-item-label {
+  position: absolute;
+  top: 69%;
+  width: calc(100% - 20px);
+  background: #367C79;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 6%;
+  margin: 0;
+  font-size: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+/* Footer styling */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #666666;
+  color: #FDFDFD;
+  border-top: 10px solid #367C79;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+}
+
+
+/* Sticky footer - https://css-tricks.com/snippets/css/sticky-footer */
+html, body {
+  height: 100%;
+}
+
+#page-wrapper {
+  min-height: 100%;
+  margin-bottom: -70px;
+}
+
+#page-wrapper:after {
+  content: "";
+  display: block;
+  height: 70px;
+}
+
